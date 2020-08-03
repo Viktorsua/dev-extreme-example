@@ -1,24 +1,28 @@
 import { withNavigationWatcher } from './contexts/navigation';
-import { HomePage, DisplayDataPage, ProfilePage } from './pages';
+import { HomePage, ToDoList, DisplayDataPage, ProfilePage } from './pages';
 
 const routes = [
   {
-    path: '/display-data',
-    component: DisplayDataPage
+    path: '/home',
+    component: HomePage,
   },
   {
     path: '/profile',
-    component: ProfilePage
+    component: ProfilePage,
   },
   {
-    path: '/home',
-    component: HomePage
-  }
+    path: '/todo-list',
+    component: ToDoList,
+  },
+  {
+    path: '/display-data',
+    component: DisplayDataPage,
+  },
 ];
 
-export default routes.map(route => {
+export default routes.map((route) => {
   return {
     ...route,
-    component: withNavigationWatcher(route.component)
+    component: withNavigationWatcher(route.component),
   };
 });

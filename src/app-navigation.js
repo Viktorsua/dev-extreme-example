@@ -5,12 +5,17 @@ export const navigation = [
     icon: 'home'
   },
   {
+    text: 'Profile',
+    path: '/profile',
+    icon: 'user'
+  },
+  {
     text: 'Examples',
     icon: 'folder',
     items: [
       {
-        text: 'Profile',
-        path: '/profile'
+        text: 'ToDo List',
+        path: '/todo-list'
       },
       {
         text: 'Display Data',

@@ -3,20 +3,15 @@ import './profile.scss';
 import Form from 'devextreme-react/form';
 
 export default () => {
-  const [notes, setNotes] = useState(
-    'Sandra is a CPA and has been our controller since 2008. She loves to interact with staff so if you`ve not met her, be certain to say hi.\r\n\r\nSandra has 2 daughters both of whom are accomplished gymnasts.'
-  );
+  const [notes, setNotes] = useState('Short information');
   const employee = {
-    ID: 7,
-    FirstName: 'Sandra',
-    LastName: 'Johnson',
-    Prefix: 'Mrs.',
-    Position: 'Controller',
-    Picture: 'images/employees/06.png',
-    BirthDate: new Date('1974/11/15'),
-    HireDate: new Date('2005/05/11'),
+    ID: 1,
+    FirstName: 'Viktor',
+    LastName: 'Usov',
+    Position: 'Front-End Web Developer',
+    Picture: '/image/photo_600.jpg',
+    BirthDate: new Date('1984/12/27'),
     Notes: notes,
-    Address: '4600 N Virginia Rd.'
   };
 
   return (
@@ -27,9 +22,7 @@ export default () => {
         <div className={'form-avatar'}>
           <img
             alt={''}
-            src={`https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/${
-              employee.Picture
-            }`}
+            src={employee.Picture}
           />
         </div>
         <span>{notes}</span>

@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import appInfo from './app-info';
 import routes from './app-routes';
 import { SideNavOuterToolbar as SideNavBarLayout } from './layouts';
-import { Footer } from './components';
 
 export default function() {
   return (
@@ -19,9 +18,6 @@ export default function() {
         ))}
         <Redirect to={'/home'} />
       </Switch>
-      <Footer>
-        Copyright © 2011-2019
-      </Footer>
     </SideNavBarLayout>
   );
 }

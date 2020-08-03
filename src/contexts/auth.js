@@ -3,8 +3,8 @@ import React, { useState, useEffect, createContext, useContext, useCallback } fr
 const AuthContext = createContext({});
 const useAuth = () => useContext(AuthContext);
 const defaultUser = {
-  email: 'sandra@example.com',
-  avatarUrl: 'https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/06.png'
+  email: 'vik@example.app',
+  avatarUrl: '/image/photo_600.jpg'
 }
 
 function AuthProvider(props) {
@@ -17,7 +17,7 @@ function AuthProvider(props) {
 
     setUser({
       email,
-      avatarUrl: defaultUser.avatarUrl
+      avatarUrl: defaultUser.avatarUrl 
     });
   }, []);
 

@@ -8,10 +8,6 @@ export default function ({ menuMode }) {
   const { user, logOut } = useAuth();
   const menuItems = useMemo(() => ([
     {
-      text: 'Profile',
-      icon: 'user'
-    },
-    {
       text: 'Logout',
       icon: 'runner',
       onClick: logOut
